@@ -1,4 +1,6 @@
+multiline = '''
+life is too short
+you need python
+'''
 
-
-print("kwanhee")
-print("it's parctice of branch/github!!")
+print(multiline)
