@@ -1,2 +1,2 @@
-a = "life, python"
-a[2]
+print("chance of rain is %d%%." %60)
+
