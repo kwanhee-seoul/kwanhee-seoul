@@ -1,2 +1,2 @@
-print("chance of rain is %d%%." %60)
-
+a = "MacbookPro"
+print(a[4],a[6])
