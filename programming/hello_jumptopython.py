@@ -9,3 +9,6 @@ for char in a:
 print(reverse)
 
 
+
+a= "i ate {fruit} this morning, and went school in {hour}:{minute}." .format(fruit='apple', hour=7, minute=10)
+print(a)
