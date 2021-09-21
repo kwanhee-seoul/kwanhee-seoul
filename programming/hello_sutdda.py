@@ -67,9 +67,9 @@ if start == 5400:
         batmoney=int(input("배팅할 칩을 적어주세요(최소 배팅 10)\n배팅금액:"))
                 
         if batmoney<10:
-            defaultmoney -= 20
+            defaultmoney -= 15
             batmoney=10
-            print("최소단위 이하는 기본 배팅 10칩에 페널티 20칩입니다.")
+            print("최소단위 이하는 기본 배팅 10칩에 페널티 15칩입니다.")
         else:
             pass
             
@@ -85,7 +85,7 @@ if start == 5400:
         
         print("컴퓨터의 패는",comopen,comclose)
         if comkwang == 38:
-            print("3 8 광땡")  
+            print("광땡")  
         elif comcatcher == 37:
             print("3 7 땡잡이")
         elif comclose > comopen:
