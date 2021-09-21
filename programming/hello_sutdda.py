@@ -15,7 +15,7 @@ if start == 5400:
 
 
     while defaultmoney>0 and defaultcommoney>0:
-        print("\n\n\n시작하겠습니다. \n")
+        print("\n\n\n@@@@@@@@시작하겠습니다.@@@@@@@@ \n")
         print("당신의 손패입니다.")
         playeropen=random.randrange(1,10)
         playerclose=random.randrange(1,10)
@@ -57,16 +57,21 @@ if start == 5400:
             print(comopen,"끝")
             comhand = comopen'''
 
-        print("\n당신의 오픈 카드는", playeropen)
+        #print("\n당신의 오픈 카드는", playeropen)
         print("\n컴퓨터의 오픈 카드는",comopen)
 
 
         #print("\n테스트용 각 패 출력",hand, comhand)
         
         print("\n당신의 현재 칩은",defaultmoney,"입니다.\n컴퓨터의 현재 칩은",defaultcommoney,"입니다.")
-        batmoney=int(input("배팅할 칩을 적어주세요"))
+        batmoney=int(input("배팅할 칩을 적어주세요(최소 배팅 10)\n배팅금액:"))
                 
-        
+        if batmoney<10:
+            defaultmoney -= 20
+            batmoney=10
+            print("최소단위 이하는 기본 배팅 10칩에 페널티 20칩입니다.")
+        else:
+            pass
             
         defaultmoney-=batmoney
         #print("테스트용 디폴트머니 출력",defaultmoney)
@@ -76,7 +81,7 @@ if start == 5400:
 
 
 
-        print("\n결과 오픈하겠습니다.\n")
+        print("\n@@@@@@@\n결과 오픈하겠습니다.\n@@@@@@@@@@@\n")
         
         print("컴퓨터의 패는",comopen,comclose)
         if comkwang == 38:
@@ -146,13 +151,13 @@ if start == 5400:
         print("당신의 칩은",defaultmoney,"컴퓨터의 칩은",defaultcommoney)      
                 
         qwerty=int(input("다시 하시겠습니까? 1/0"))
-        if qwerty == 1:
-            pass
+        if qwerty == 0:
+            defaultmoney = -10000
         else:
-            defaultmoney = -1000000
+            pass
 
     if defaultcommoney > 0:
-        print("당신의 파산으로 게임이 끝났습니다. 안녕히 가십시오")
+        print("당신의 파산으로 게임이 끝났습니다. 안녕히 가십시오.\n당신의 빚은",-defaultmoney)
 
     else:
-        print("컴퓨터의 파산으로 게임이 끝났습니다. 안녕히 가십시오.")
+        print("컴퓨터의 파산으로 게임이 끝났습니다. 안녕히 가십시오.\n컴퓨터의 빚은",-defaultcommoney)
