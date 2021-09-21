@@ -59,3 +59,13 @@ minho = {
 }
 
 print(minho['age'])
+
+ganzi = {
+    "cafe" : "starbucks",
+    "IDcard" : "Macbook",
+    "my feel" : "fucking bad.. i didnt wanna this expensive shit",
+}
+
+print(ganzi["cafe"])
+print(ganzi["IDcard"])
+print(ganzi["my feel"])

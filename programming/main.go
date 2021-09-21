@@ -1,16 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
-
-func canIDrink(age int) bool {
-	if age < 18 {
-		return false
-	}
-	return true
-}
+import "fmt"
 
 func main() {
-	fmt.Println(canIDrink(19))
+	names := [3]string{"kwanhee", "sujin", "sangwoo"}
+	names[1] = "juhye"
+	fmt.Println(names)
 }
